@@ -164,3 +164,33 @@ TEST(CTRModeTest, TamperedCiphertextCorruptsPlaintext) {
 
     EXPECT_NE(recovered, pt);
 }
+
+TEST(CTRModeTest, CounterOverflowAllowsSingleFinalCounterBlock) {
+    auto key = from_hex("000102030405060708090a0b0c0d0e0f");
+    auto iv  = from_hex("ffffffffffffffffffffffffffffffff");
+
+    std::vector<uint8_t> pt(16, 0x41);
+    std::vector<uint8_t> ct(pt.size());
+
+    AES aes(key.data(), static_cast<int>(key.size()));
+
+    EXPECT_NO_THROW({
+        AES_CTR_Process(aes, iv.data(), pt.data(), pt.size(), ct.data());
+    });
+}
+
+TEST(CTRModeTest, CounterOverflowThrowsWhenMoreBlocksRequired) {
+    auto key = from_hex("000102030405060708090a0b0c0d0e0f");
+    auto iv  = from_hex("ffffffffffffffffffffffffffffffff");
+
+    // 17 bytes needs 2 CTR blocks.
+    // With IV = FF..FF, the second block would wrap to 00..00.
+    std::vector<uint8_t> pt(17, 0x41);
+    std::vector<uint8_t> ct(pt.size());
+
+    AES aes(key.data(), static_cast<int>(key.size()));
+
+    EXPECT_THROW({
+        AES_CTR_Process(aes, iv.data(), pt.data(), pt.size(), ct.data());
+    }, std::runtime_error);
+}

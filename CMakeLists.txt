@@ -101,3 +101,10 @@ add_test(
 
 message(STATUS "Tests   : aes_tests, cli_kat, cli_negative")
 
+add_test(
+    NAME cli_counter_overflow
+    COMMAND ${CMAKE_COMMAND}
+        -DAESTOOL=$<TARGET_FILE:aestool>
+        -DWORKDIR=${CMAKE_BINARY_DIR}/counter_overflow_test
+        -P ${CMAKE_CURRENT_SOURCE_DIR}/scripts/test_counter_overflow.cmake
+)

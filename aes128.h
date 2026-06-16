@@ -310,12 +310,22 @@ private:
 //  No padding required.
 // ----------------------------------------------------------------
 
-// Increment a 128-bit counter (big-endian, stored in byte[16])
-static inline void IncrementCounter(uint8_t* ctr)
-{
+// Increment a 128-bit counter in big-endian order.
+// Returns normally if increment succeeds.
+// Throws if the counter would overflow from FF..FF to 00..00.
+static inline void IncrementCounterChecked(uint8_t* ctr) {
     for (int i = 15; i >= 0; --i) {
-        if (++ctr[i]) break; // no carry
+        if (ctr[i] == 0xff) {
+            ctr[i] = 0x00;
+        } else {
+            ++ctr[i];
+            return;
+        }
     }
+
+    throw std::runtime_error(
+        "AES-CTR counter overflow: IV/counter space exhausted"
+    );
 }
 
 /**
@@ -330,25 +340,36 @@ static inline void IncrementCounter(uint8_t* ctr)
  * Endianness: counter is the full 128-bit IV incremented as a
  * big-endian integer (compatible with NIST SP 800-38A).
  */
-static void AES_CTR_Process(const AES& aes,
-                             const uint8_t* iv,
-                             const uint8_t* in,
-                             size_t in_len,
-                             uint8_t* out)
-{
+static void AES_CTR_Process(
+    const AES& aes,
+    const uint8_t* iv,
+    const uint8_t* in,
+    size_t in_len,
+    uint8_t* out
+) {
     uint8_t counter[16];
     uint8_t keystream[16];
+
     std::memcpy(counter, iv, 16);
 
     size_t offset = 0;
+
     while (offset < in_len) {
         aes.EncryptBlock(counter, keystream);
-        IncrementCounter(counter);
 
-        size_t chunk = std::min((size_t)16, in_len - offset);
-        for (size_t i = 0; i < chunk; ++i)
+        size_t chunk = std::min(static_cast<size_t>(16), in_len - offset);
+
+        for (size_t i = 0; i < chunk; ++i) {
             out[offset + i] = in[offset + i] ^ keystream[i];
+        }
 
         offset += chunk;
+
+        // Only increment if another block is still needed.
+        // This allows IV = FF..FF for exactly one final block,
+        // but rejects longer inputs because the next counter would wrap.
+        if (offset < in_len) {
+            IncrementCounterChecked(counter);
+        }
     }
 }

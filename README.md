@@ -86,3 +86,18 @@ cmake --build .
 - CTR mode provides confidentiality only (no authentication)
   Windows builds this may not be a true CSPRNG
 - No constant-time S-box (susceptible to cache-timing attacks)
+
+### CTR Counter Behavior
+
+The CTR counter is treated as a 128-bit big-endian integer stored in the 16-byte IV.
+
+For each block:
+
+1. AES encrypts the current counter block to produce keystream.
+2. Plaintext/ciphertext is XORed with the keystream.
+3. The counter is incremented only if another block is required.
+
+Counter overflow is fail-closed:
+
+- IV = `ff ff ... ff` with input length ≤ 16 bytes is accepted.
+- IV = `ff ff ... ff` with input length > 16 bytes is rejected because the next counter block would wrap to `00 00 ... 00`.
