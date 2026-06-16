@@ -1,0 +1,65 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build: aestool.exe (Lab2 Pure C++)",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-O2",
+                "-Wall",
+                "-Wextra",
+                "${workspaceFolder}\\aestool.cpp",
+                "-o",
+                "${workspaceFolder}\\aestool.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "detail": "Build Lab 2 aestool.cpp. Pure C++/STL only, no Crypto++/OpenSSL linkage."
+        },
+        {
+            "label": "Build: bench.exe (Lab2 Benchmark)",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-O3",
+                "-march=native",
+                "-Wall",
+                "-Wextra",
+                "${workspaceFolder}\\bench.cpp",
+                "-o",
+                "${workspaceFolder}\\bench.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Build Lab 2 benchmark. Pure C++/STL only."
+        },
+        {
+            "label": "Build: Lab2 all",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build: aestool.exe (Lab2 Pure C++)",
+                "Build: bench.exe (Lab2 Benchmark)"
+            ],
+            "problemMatcher": [],
+            "group": "build",
+            "detail": "Build aestool.exe and bench.exe sequentially."
+        }
+    ]
+}

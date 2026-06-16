@@ -1,0 +1,70 @@
+[
+  {
+    "id": "FIPS197-AES128-Encrypt-1",
+    "type": "aes_block",
+    "key": "000102030405060708090a0b0c0d0e0f",
+    "pt": "00112233445566778899aabbccddeeff",
+    "ct": "69c4e0d86a7b0430d8cdb78070b4c55a"
+  },
+  {
+    "id": "FIPS197-AES128-Encrypt-2",
+    "type": "aes_block",
+    "key": "2b7e151628aed2a6abf7158809cf4f3c",
+    "pt": "6bc1bee22e409f96e93d7e117393172a",
+    "ct": "3ad77bb40d7a3660a89ecaf32466ef97"
+  },
+  {
+    "id": "FIPS197-AES192-Encrypt-1",
+    "type": "aes_block",
+    "key": "000102030405060708090a0b0c0d0e0f1011121314151617",
+    "pt": "00112233445566778899aabbccddeeff",
+    "ct": "dda97ca4864cdfe06eaf70a0ec0d7191"
+  },
+  {
+    "id": "FIPS197-AES256-Encrypt-1",
+    "type": "aes_block",
+    "key": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "pt": "00112233445566778899aabbccddeeff",
+    "ct": "8ea2b7ca516745bfeafc49904b496089"
+  },
+  {
+    "id": "NIST-SP800-38A-CTR-AES128-1",
+    "type": "ctr",
+    "key": "2b7e151628aed2a6abf7158809cf4f3c",
+    "iv": "f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+    "pt": "6bc1bee22e409f96e93d7e117393172a",
+    "ct": "874d6191b620e3261bef6864990db6ce"
+  },
+  {
+    "id": "NIST-SP800-38A-CTR-AES128-2",
+    "type": "ctr",
+    "key": "2b7e151628aed2a6abf7158809cf4f3c",
+    "iv": "f0f1f2f3f4f5f6f7f8f9fafbfcfdff00",
+    "pt": "ae2d8a571e03ac9c9eb76fac45af8e51",
+    "ct": "9806f66b7970fdff8617187bb9fffdff"
+  },
+  {
+    "id": "NIST-SP800-38A-CTR-AES128-3",
+    "type": "ctr",
+    "key": "2b7e151628aed2a6abf7158809cf4f3c",
+    "iv": "f0f1f2f3f4f5f6f7f8f9fafbfcfdff01",
+    "pt": "30c81c46a35ce411e5fbc1191a0a52ef",
+    "ct": "5ae4df3edbd5d35e5b4f09020db03eab"
+  },
+  {
+    "id": "NIST-SP800-38A-CTR-AES256-1",
+    "type": "ctr",
+    "key": "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4",
+    "iv": "f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+    "pt": "6bc1bee22e409f96e93d7e117393172a",
+    "ct": "601ec313775789a5b7a7f504bbf3d228"
+  },
+  {
+    "id": "NIST-SP800-38A-CTR-AES256-2",
+    "type": "ctr",
+    "key": "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4",
+    "iv": "f0f1f2f3f4f5f6f7f8f9fafbfcfdff00",
+    "pt": "ae2d8a571e03ac9c9eb76fac45af8e51",
+    "ct": "f443e3ca4d62b59aca84e990cacaf5c5"
+  }
+]
