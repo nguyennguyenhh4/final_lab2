@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule
+C:/FinalLab/MSV.All6labs/lab2/build-mingw/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule

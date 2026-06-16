@@ -1,0 +1,5 @@
+if(EXISTS "C:/FinalLab/MSV.All6labs/lab2/build/aes_tests[1]_tests.cmake")
+  include("C:/FinalLab/MSV.All6labs/lab2/build/aes_tests[1]_tests.cmake")
+else()
+  add_test(aes_tests_NOT_BUILT aes_tests_NOT_BUILT)
+endif()

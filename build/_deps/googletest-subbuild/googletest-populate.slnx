@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Solution>
+	<Configurations>
+		<BuildType Name="Debug"/>
+		<Platform Name="x64"/>
+	</Configurations>
+	<Folder Name="/CMakePredefinedTargets/">
+		<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c946ecdc-9ba6-39fe-8462-c11fd84d27b2" DefaultStartup="true">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="googletest-populate.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+		</Project>
+		<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="5b240457-5cd8-3b5b-a786-ffadff9c276c"/>
+	</Folder>
+	<Folder Name="/ExternalProjectTargets/"/>
+	<Folder Name="/ExternalProjectTargets/googletest-populate/">
+		<Project Path="googletest-populate.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="6e77cee2-0fd6-33f5-8952-55c9c54c33b1">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		</Project>
+	</Folder>
+</Solution>

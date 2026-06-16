@@ -1,0 +1,380 @@
+Start testing: Jun 16 13:09 SE Asia Standard Time
+----------------------------------------------------------
+1/14 Testing: AESCoreTest.FIPS197_AES128_BlockEncrypt
+1/14 Test: AESCoreTest.FIPS197_AES128_BlockEncrypt
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=AESCoreTest.FIPS197_AES128_BlockEncrypt" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"AESCoreTest.FIPS197_AES128_BlockEncrypt" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = AESCoreTest.FIPS197_AES128_BlockEncrypt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AESCoreTest
+[ RUN      ] AESCoreTest.FIPS197_AES128_BlockEncrypt
+[       OK ] AESCoreTest.FIPS197_AES128_BlockEncrypt (0 ms)
+[----------] 1 test from AESCoreTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AESCoreTest.FIPS197_AES128_BlockEncrypt" end time: Jun 16 13:09 SE Asia Standard Time
+"AESCoreTest.FIPS197_AES128_BlockEncrypt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/14 Testing: AESCoreTest.FIPS197_AES128_BlockDecrypt
+2/14 Test: AESCoreTest.FIPS197_AES128_BlockDecrypt
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=AESCoreTest.FIPS197_AES128_BlockDecrypt" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"AESCoreTest.FIPS197_AES128_BlockDecrypt" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = AESCoreTest.FIPS197_AES128_BlockDecrypt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AESCoreTest
+[ RUN      ] AESCoreTest.FIPS197_AES128_BlockDecrypt
+[       OK ] AESCoreTest.FIPS197_AES128_BlockDecrypt (0 ms)
+[----------] 1 test from AESCoreTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AESCoreTest.FIPS197_AES128_BlockDecrypt" end time: Jun 16 13:09 SE Asia Standard Time
+"AESCoreTest.FIPS197_AES128_BlockDecrypt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/14 Testing: AESCoreTest.RejectInvalidKeyLength
+3/14 Test: AESCoreTest.RejectInvalidKeyLength
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=AESCoreTest.RejectInvalidKeyLength" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"AESCoreTest.RejectInvalidKeyLength" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = AESCoreTest.RejectInvalidKeyLength
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AESCoreTest
+[ RUN      ] AESCoreTest.RejectInvalidKeyLength
+[       OK ] AESCoreTest.RejectInvalidKeyLength (0 ms)
+[----------] 1 test from AESCoreTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"AESCoreTest.RejectInvalidKeyLength" end time: Jun 16 13:09 SE Asia Standard Time
+"AESCoreTest.RejectInvalidKeyLength" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/14 Testing: CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock
+4/14 Test: CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock
+[       OK ] CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/14 Testing: CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock
+5/14 Test: CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock
+[       OK ] CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/14 Testing: CTRModeTest.PartialFinalBlockRoundTrip
+6/14 Test: CTRModeTest.PartialFinalBlockRoundTrip
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.PartialFinalBlockRoundTrip" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.PartialFinalBlockRoundTrip" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.PartialFinalBlockRoundTrip
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.PartialFinalBlockRoundTrip
+[       OK ] CTRModeTest.PartialFinalBlockRoundTrip (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.PartialFinalBlockRoundTrip" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.PartialFinalBlockRoundTrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/14 Testing: CTRModeTest.WrongKeyDoesNotRecoverPlaintext
+7/14 Test: CTRModeTest.WrongKeyDoesNotRecoverPlaintext
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.WrongKeyDoesNotRecoverPlaintext" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.WrongKeyDoesNotRecoverPlaintext" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.WrongKeyDoesNotRecoverPlaintext
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.WrongKeyDoesNotRecoverPlaintext
+[       OK ] CTRModeTest.WrongKeyDoesNotRecoverPlaintext (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.WrongKeyDoesNotRecoverPlaintext" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.WrongKeyDoesNotRecoverPlaintext" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/14 Testing: CTRModeTest.TamperedCiphertextCorruptsPlaintext
+8/14 Test: CTRModeTest.TamperedCiphertextCorruptsPlaintext
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.TamperedCiphertextCorruptsPlaintext" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.TamperedCiphertextCorruptsPlaintext" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.TamperedCiphertextCorruptsPlaintext
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.TamperedCiphertextCorruptsPlaintext
+[       OK ] CTRModeTest.TamperedCiphertextCorruptsPlaintext (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.TamperedCiphertextCorruptsPlaintext" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.TamperedCiphertextCorruptsPlaintext" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/14 Testing: CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock
+9/14 Test: CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock
+[       OK ] CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/14 Testing: CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired
+10/14 Test: CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aes_tests.exe" "--gtest_filter=CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired" "--gtest_also_run_disabled_tests"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\FinalLab\MSV.All6labs\lab2\build-mingw\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CTRModeTest
+[ RUN      ] CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired
+[       OK ] CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired (0 ms)
+[----------] 1 test from CTRModeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired" end time: Jun 16 13:09 SE Asia Standard Time
+"CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/14 Testing: cli_kat
+11/14 Test: cli_kat
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aestool.exe" "--kat" "C:/FinalLab/MSV.All6labs/lab2/nist_vectors.json"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"cli_kat" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+
+=== KAT Runner: C:/FinalLab/MSV.All6labs/lab2/nist_vectors.json ===
+
+[PASS] FIPS197-AES128-Encrypt-1
+[PASS] FIPS197-AES128-Encrypt-2
+[PASS] FIPS197-AES192-Encrypt-1
+[PASS] FIPS197-AES256-Encrypt-1
+[PASS] NIST-SP800-38A-CTR-AES128-1
+[PASS] NIST-SP800-38A-CTR-AES128-2
+[PASS] NIST-SP800-38A-CTR-AES128-3
+[PASS] NIST-SP800-38A-CTR-AES256-1
+[PASS] NIST-SP800-38A-CTR-AES256-2
+
+----------------------------------------
+Total : 9  |  PASS: 9  |  FAIL: 0  |  SKIP: 0
+----------------------------------------
+
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"cli_kat" end time: Jun 16 13:09 SE Asia Standard Time
+"cli_kat" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/14 Testing: cli_negative
+12/14 Test: cli_negative
+Command: "C:/FinalLab/MSV.All6labs/lab2/build-mingw/aestool.exe" "--test-negative"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"cli_negative" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+
+=== Negative Tests (Lab 2 - Pure C++ AES-CTR) ===
+
+[PASS] T01: CTR wrong key > plaintext mismatch
+[PASS] T02: CTR wrong IV > plaintext mismatch
+[PASS] T03: CTR tampered CT > silent plaintext corruption (expected - CTR has no auth)
+       Note: CTR provides confidentiality ONLY.
+             Use AES-GCM or CTR+HMAC for authenticated encryption.
+[PASS] T04: CTR tamper undetected - documented (correct behavior)
+[PASS] T05: Invalid key length (10 bytes) > exception thrown
+[PASS] T06: Invalid key length (0 bytes) > exception thrown
+[PASS] T07: IV length 8 bytes > rejected by CLI guard
+[PASS] T08: IV length 0 bytes > rejected
+[PASS] T09: Empty input > rejected
+[PASS] T10: CTR double-encrypt roundtrip == original plaintext
+
+--------------------------------------------
+Total : 10  |  PASS: 10  |  FAIL: 0
+--------------------------------------------
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"cli_negative" end time: Jun 16 13:09 SE Asia Standard Time
+"cli_negative" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/14 Testing: cli_rng_keygen_geniv
+13/14 Test: cli_rng_keygen_geniv
+Command: "C:/Program Files/CMake/bin/cmake.exe" "-DAESTOOL=C:/FinalLab/MSV.All6labs/lab2/build-mingw/aestool.exe" "-DWORKDIR=C:/FinalLab/MSV.All6labs/lab2/build-mingw/rng_test" "-P" "C:/FinalLab/MSV.All6labs/lab2/scripts/test_rng_keygen.cmake"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"cli_rng_keygen_geniv" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Generated AES-128 key > C:/FinalLab/MSV.All6labs/lab2/build-mingw/rng_test/key1.bin (16 bytes)
+Key (hex): 3b3ead224723428d197d02b10a2be49f
+Generated AES-128 key > C:/FinalLab/MSV.All6labs/lab2/build-mingw/rng_test/key2.bin (16 bytes)
+Key (hex): 64995993a32ad1a257c6af288c54a3d2
+Generated IV > C:/FinalLab/MSV.All6labs/lab2/build-mingw/rng_test/iv1.bin
+IV (hex) : 78f187fdb8370427ba847e0477039afe
+Generated IV > C:/FinalLab/MSV.All6labs/lab2/build-mingw/rng_test/iv2.bin
+IV (hex) : e3d43c7ede2471fa888962b85bf08814
+-- PASS: OS CSPRNG keygen/geniv generated valid non-identical 16-byte outputs.
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"cli_rng_keygen_geniv" end time: Jun 16 13:09 SE Asia Standard Time
+"cli_rng_keygen_geniv" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/14 Testing: cli_counter_overflow
+14/14 Test: cli_counter_overflow
+Command: "C:/Program Files/CMake/bin/cmake.exe" "-DAESTOOL=C:/FinalLab/MSV.All6labs/lab2/build-mingw/aestool.exe" "-DWORKDIR=C:/FinalLab/MSV.All6labs/lab2/build-mingw/counter_overflow_test" "-P" "C:/FinalLab/MSV.All6labs/lab2/scripts/test_counter_overflow.cmake"
+Directory: C:/FinalLab/MSV.All6labs/lab2/build-mingw
+"cli_counter_overflow" start time: Jun 16 13:09 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+-- PASS: AES-CTR counter overflow is detected and fails closed.
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"cli_counter_overflow" end time: Jun 16 13:09 SE Asia Standard Time
+"cli_counter_overflow" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 16 13:09 SE Asia Standard Time

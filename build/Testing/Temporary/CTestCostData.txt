@@ -1,0 +1,15 @@
+AESCoreTest.FIPS197_AES128_BlockEncrypt 1 0.0300409
+AESCoreTest.FIPS197_AES128_BlockDecrypt 1 0.0148107
+AESCoreTest.RejectInvalidKeyLength 1 0.0132092
+CTRModeTest.NIST_SP800_38A_AES128_CTR_OneBlock 1 0.0118167
+CTRModeTest.NIST_SP800_38A_AES128_CTR_MultiBlock 1 0.0106857
+CTRModeTest.PartialFinalBlockRoundTrip 1 0.0115532
+CTRModeTest.WrongKeyDoesNotRecoverPlaintext 1 0.0102403
+CTRModeTest.TamperedCiphertextCorruptsPlaintext 1 0.0120927
+CTRModeTest.CounterOverflowAllowsSingleFinalCounterBlock 1 0.0118151
+CTRModeTest.CounterOverflowThrowsWhenMoreBlocksRequired 1 0.0114251
+cli_kat 1 0.060349
+cli_negative 1 0.0203589
+cli_rng_keygen_geniv 1 0.106557
+cli_counter_overflow 1 0.0819884
+---

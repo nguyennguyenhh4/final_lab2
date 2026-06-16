@@ -1,0 +1,68 @@
+{
+  "tests": 10,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "AESCoreTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "FIPS197_AES128_BlockEncrypt",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 30
+        },
+        {
+          "name": "FIPS197_AES128_BlockDecrypt",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 43
+        },
+        {
+          "name": "RejectInvalidKeyLength",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "name": "CTRModeTest",
+      "tests": 7,
+      "testsuite": [
+        {
+          "name": "NIST_SP800_38A_AES128_CTR_OneBlock",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 63
+        },
+        {
+          "name": "NIST_SP800_38A_AES128_CTR_MultiBlock",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 83
+        },
+        {
+          "name": "PartialFinalBlockRoundTrip",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 109
+        },
+        {
+          "name": "WrongKeyDoesNotRecoverPlaintext",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 127
+        },
+        {
+          "name": "TamperedCiphertextCorruptsPlaintext",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 147
+        },
+        {
+          "name": "CounterOverflowAllowsSingleFinalCounterBlock",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 168
+        },
+        {
+          "name": "CounterOverflowThrowsWhenMoreBlocksRequired",
+          "file": "C:\\FinalLab\\MSV.All6labs\\lab2\\tests\\test_aes_core.cpp",
+          "line": 182
+        }
+      ]
+    }
+  ]
+}
