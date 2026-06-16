@@ -13,6 +13,10 @@ endif()
 
 # --- aestool ---------------------------------------------------
 add_executable(aestool aestool.cpp)
+    if(WIN32)
+    target_link_libraries(aestool PRIVATE bcrypt)
+    endif()
+
 target_include_directories(aestool PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 if(MSVC)
@@ -87,4 +91,13 @@ add_test(
     COMMAND $<TARGET_FILE:aestool> --test-negative
 )
 
+add_test(
+    NAME cli_rng_keygen_geniv
+    COMMAND ${CMAKE_COMMAND}
+        -DAESTOOL=$<TARGET_FILE:aestool>
+        -DWORKDIR=${CMAKE_BINARY_DIR}/rng_test
+        -P ${CMAKE_CURRENT_SOURCE_DIR}/scripts/test_rng_keygen.cmake
+)
+
 message(STATUS "Tests   : aes_tests, cli_kat, cli_negative")
+

@@ -84,6 +84,5 @@ cmake --build .
 ## Known Limitations
 
 - CTR mode provides confidentiality only (no authentication)
-- `std::random_device` is used for key/IV generation; on some
   Windows builds this may not be a true CSPRNG
 - No constant-time S-box (susceptible to cache-timing attacks)

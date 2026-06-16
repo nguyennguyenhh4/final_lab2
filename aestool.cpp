@@ -20,6 +20,24 @@
  *   --verbose                 Extra diagnostic output
  */
 
+
+#if defined(_WIN32)
+    #ifndef NOMINMAX
+    #define NOMINMAX
+    #endif
+    #include <windows.h>
+    #include <bcrypt.h>
+#elif defined(__linux__)
+    #include <sys/random.h>
+    #include <fcntl.h>
+    #include <unistd.h>
+    #include <errno.h>
+    #include <cstring>
+#endif
+
+#include <algorithm>
+#include <limits>
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -69,26 +87,112 @@ static bool HasArg(const map<string, string>& args,
     return args.find(key) != args.end();
 }
 
-// ----------------------- Secure RNG (no crypto lib) -------------
-// Uses std::random_device which on modern Linux/Windows reads from
-// OS CSPRNG (/dev/urandom, BCryptGenRandom).
-// NOTE: std::random_device is NOT a CSPRNG on all implementations.
-// For production, use OS API directly. For lab: acceptable.
 
-static void SecureRandBytes(uint8_t* buf, size_t len)
-{
-    std::random_device rd;
-    size_t full = len / 4;
-    size_t rem  = len % 4;
-    for (size_t i = 0; i < full; ++i) {
-        uint32_t v = rd();
-        memcpy(buf + i*4, &v, 4);
+// ----------------------- Secure RNG (OS CSPRNG, no crypto library) -------------
+// Lab 2 forbids external crypto libraries for implementation.
+// Therefore key/IV generation uses OS-provided CSPRNG directly:
+//   - Windows: BCryptGenRandom
+//   - Linux  : getrandom(), fallback to /dev/urandom
+static void SecureRandBytes(uint8_t* buf, size_t len) {
+    if (len == 0) return;
+    if (buf == nullptr) {
+        throw std::runtime_error("SecureRandBytes: null buffer");
     }
-    if (rem) {
-        uint32_t v = rd();
-        memcpy(buf + full*4, &v, rem);
+
+#if defined(_WIN32)
+
+    size_t offset = 0;
+    while (offset < len) {
+        size_t remaining = len - offset;
+        ULONG chunk = static_cast<ULONG>(
+            std::min<size_t>(remaining, std::numeric_limits<ULONG>::max())
+        );
+
+        NTSTATUS status = BCryptGenRandom(
+            nullptr,
+            reinterpret_cast<PUCHAR>(buf + offset),
+            chunk,
+            BCRYPT_USE_SYSTEM_PREFERRED_RNG
+        );
+
+        if (status != 0) {
+            throw std::runtime_error("SecureRandBytes: BCryptGenRandom failed");
+        }
+
+        offset += chunk;
     }
+
+#elif defined(__linux__)
+
+    size_t offset = 0;
+
+    // Preferred Linux CSPRNG syscall.
+    while (offset < len) {
+        ssize_t r = getrandom(buf + offset, len - offset, 0);
+
+        if (r > 0) {
+            offset += static_cast<size_t>(r);
+            continue;
+        }
+
+        if (r == -1 && errno == EINTR) {
+            continue;
+        }
+
+        // Very old kernels may not support getrandom().
+        // Fallback to /dev/urandom below.
+        if (r == -1 && errno == ENOSYS) {
+            break;
+        }
+
+        throw std::runtime_error(
+            std::string("SecureRandBytes: getrandom failed: ") + std::strerror(errno)
+        );
+    }
+
+    if (offset == len) return;
+
+    int fd = open("/dev/urandom", O_RDONLY
+#ifdef O_CLOEXEC
+        | O_CLOEXEC
+#endif
+    );
+
+    if (fd < 0) {
+        throw std::runtime_error(
+            std::string("SecureRandBytes: cannot open /dev/urandom: ") + std::strerror(errno)
+        );
+    }
+
+    while (offset < len) {
+        ssize_t r = read(fd, buf + offset, len - offset);
+
+        if (r > 0) {
+            offset += static_cast<size_t>(r);
+            continue;
+        }
+
+        if (r == -1 && errno == EINTR) {
+            continue;
+        }
+
+        close(fd);
+        throw std::runtime_error(
+            std::string("SecureRandBytes: /dev/urandom read failed: ") + std::strerror(errno)
+        );
+    }
+
+    close(fd);
+
+#else
+
+    throw std::runtime_error(
+        "SecureRandBytes: unsupported platform. Use Windows or Linux."
+    );
+
+#endif
 }
+
 
 // ----------------------- Hex encode/decode ----------------------
 
