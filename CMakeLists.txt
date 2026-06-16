@@ -39,3 +39,52 @@ message(STATUS "Build type  : ${CMAKE_BUILD_TYPE}")
 message(STATUS "C++ standard: C++${CMAKE_CXX_STANDARD}")
 message(STATUS "Targets     : aestool, bench")
 message(STATUS "Constraint  : No external crypto library")
+
+# --- GoogleTest / Unit tests ------------------------------------
+include(FetchContent)
+
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/refs/tags/v1.15.2.zip
+)
+
+# Fix runtime library issue on MSVC/Windows
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_executable(aes_tests
+    tests/test_aes_core.cpp
+)
+
+target_include_directories(aes_tests PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_link_libraries(aes_tests PRIVATE
+    GTest::gtest_main
+)
+
+if(MSVC)
+    target_compile_options(aes_tests PRIVATE /W3 /O2 /std:c++17)
+else()
+    target_compile_options(aes_tests PRIVATE -Wall -O2 -std=c++17)
+endif()
+
+include(GoogleTest)
+gtest_discover_tests(aes_tests)
+
+# Also register existing CLI tests into ctest
+add_test(
+    NAME cli_kat
+    COMMAND $<TARGET_FILE:aestool> --kat ${CMAKE_CURRENT_SOURCE_DIR}/nist_vectors.json
+)
+
+add_test(
+    NAME cli_negative
+    COMMAND $<TARGET_FILE:aestool> --test-negative
+)
+
+message(STATUS "Tests   : aes_tests, cli_kat, cli_negative")
